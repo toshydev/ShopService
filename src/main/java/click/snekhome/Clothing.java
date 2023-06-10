@@ -38,12 +38,13 @@ public class Clothing extends Product {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
         Clothing clothing = (Clothing) o;
         return Objects.equals(size, clothing.size) && Objects.equals(material, clothing.material);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(size, material);
+        return Objects.hash(super.hashCode(), size, material);
     }
 }
