@@ -27,7 +27,7 @@ public class OrderTest {
         Map<Integer, Product> products = order.getProducts();
 
         // Assert that the clothing is added to the order
-        assertThat(products).containsEntry(1, clothing);
+        assertThat(products).containsEntry(clothing.getId(), clothing);
     }
 
     @Test
