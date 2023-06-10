@@ -1,7 +1,7 @@
 package click.snekhome;
 
 public class Main {
-    private ShopService shop;
+    private final ShopService shop;
 
     public Main() {
         this.shop = new ShopService();
